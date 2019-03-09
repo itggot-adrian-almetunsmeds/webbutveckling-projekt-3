@@ -8,9 +8,13 @@ body {
   display: block; }
 
 header {
+  position: sticky;
+  top: 0;
+  left: 0;
   width: 100%;
   background: green;
-  height: 44px; }
+  height: 44px;
+  z-index: 100000; }
 
 #menu {
   position: fixed;
@@ -21,6 +25,9 @@ header {
   position: fixed;
   top: 10px;
   right: 24px; }
+
+.wrapper h2 {
+  margin: 0 0 0 8px; }
 
 .cart {
   width: 80vw;
@@ -33,19 +40,21 @@ header {
   grid-template-areas: "image title none" "image description price" "image saldo none"; }
 
 footer {
+  background-color: green;
   width: 100%;
   padding: 5px 0 5px 0;
   text-align: center; }
 
 .carousel {
-  padding: 10px 0 10px 0; }
+  padding: 10px 0 10px 0;
+  margin-bottom: -40px; }
 
 .slide {
   display: none;
   height: 200px;
   width: 100%;
   grid-template-columns: auto auto;
-  grid-template-rows: 200px 0;
+  grid-template-rows: 200px 1px;
   grid-template-areas: "img img" "indicators indicators"; }
   .slide .img {
     position: relative;
@@ -99,3 +108,31 @@ footer {
 
 .prev:hover, .next:hover {
   background-color: rgba(0, 0, 0, 0.7); }
+
+.nav {
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  left: -65vw;
+  width: 60vw;
+  background-color: grey;
+  transition: all 0.3s;
+  z-index: 100000000000000; }
+  .nav h4 {
+    margin-left: 5px; }
+
+.active {
+  left: 0; }
+
+.blur {
+  filter: blur(2px); }
+
+.navback {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: -120vw;
+  bottom: 0;
+  width: 100vw;
+  transition: all 0.3s;
+  z-index: 10000000000000; }
