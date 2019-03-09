@@ -6,10 +6,14 @@
         i = 0
         data['mainad'].each do | variable |
         i += 1
+        href = variable['href']
+        if href == nil
+            href = ""
+        end
     %>
-    <div class="slide">
+    <a class="slide" href="<%= href %>">
         <div class="img" id="img<%= i %>"></div>
-    </div>
+    </a>
 
     <% 
     end 
@@ -29,12 +33,16 @@
 <div class="carousel carousel2">
 
     <% 
-       data['mainad'].each do | variable |
+       data['popularad'].each do | variable |
         i += 1
+        href = variable['href']
+        if href == nil
+            href = ""
+        end
     %>
-    <div class="slide">
+    <a class="slide" href="<%= href %>">
         <div class="img" id="img<%= i %>"></div>
-    </div>
+    </a>
 
     <% 
     end 
