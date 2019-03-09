@@ -1,5 +1,5 @@
 // Carousel functions
-var slideIndex = [0, 0];
+var slideIndex = [0, 0, 0];
 
 function showSlides(index, num) {
     num = parseInt(num + 1, 10);
@@ -59,8 +59,10 @@ function autoChangeSlide() {
 }
 renderButtons(1);
 renderButtons(2);
+renderButtons(3);
 showSlides(0, 0);
 showSlides(0, 1);
+showSlides(0, 2);
 autoChangeSlide();
 
 

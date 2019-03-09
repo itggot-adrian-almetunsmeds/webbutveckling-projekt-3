@@ -1,5 +1,4 @@
 <div class="carousel carousel1">
-
     <% 
         require 'yaml'
         data =  YAML.load_file('data/ad.yaml')
@@ -14,24 +13,18 @@
     <a class="slide" href="<%= href %>">
         <div class="img" id="img<%= i %>"></div>
     </a>
-
     <% 
     end 
     %>
-
-
     <div class="circles">
     </div>
-
     <a class="prev" onclick="changeSlide('-1', '0')">&#10094</a>
     <a class="next" onclick="changeSlide('1', '0')">&#10095</a>
-
 </div>
 
-<span>THIS IS THE BREAK POINT</span>
+<h2>Popular</h2>
 
 <div class="carousel carousel2">
-
     <% 
        data['popularad'].each do | variable |
         i += 1
@@ -43,17 +36,35 @@
     <a class="slide" href="<%= href %>">
         <div class="img" id="img<%= i %>"></div>
     </a>
-
     <% 
     end 
     %>
-
-
     <div class="circles">
     </div>
-
     <a class="prev" onclick="changeSlide('-1', '1')">&#10094</a>
     <a class="next" onclick="changeSlide('1', '1')">&#10095</a>
+</div>
 
+<h2>Smart devices</h2>
+
+<div class="carousel carousel3">
+    <% 
+       data['smartdevices'].each do | variable |
+        i += 1
+        href = variable['href']
+        if href == nil
+            href = ""
+        end
+    %>
+    <a class="slide" href="<%= href %>">
+        <div class="img" id="img<%= i %>"></div>
+    </a>
+    <% 
+    end 
+    %>
+    <div class="circles">
+    </div>
+    <a class="prev" onclick="changeSlide('-1', '2')">&#10094</a>
+    <a class="next" onclick="changeSlide('1', '2')">&#10095</a>
 </div>
 <script src="js/ad.js"></script>

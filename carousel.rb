@@ -48,6 +48,18 @@ def carousel()
         i += 1
         output << input
     end
+
+    i = 0
+    data['smartdevices'].each do |variable|
+        img = variable['mobile']     
+        id += 1
+        input = stored[id-1] + ' = document.getElementById("img' + id.to_s + '");' + stored[id-1] + '.style.backgroundImage = "url(img/' + img + ')";'
+        mobile += stored[id-1] + '.style.backgroundImage = "url(img/' + variable['mobile'] + ')";'
+        tablet += stored[id-1] + '.style.backgroundImage = "url(img/' + variable['tablet'] + ')";'
+        desktop += stored[id-1] + '.style.backgroundImage = "url(img/' + variable['desktop'] + ')";'
+        i += 1
+        output << input
+    end
     
     temp_media = 'function mediaQuery(y, z) { if (y.matches) {' + tablet + '} else if (z.matches) {' + mobile + '} else {' + desktop + '}}var y = window.matchMedia("(max-width: 1024px)");var z = window.matchMedia("(max-width: 480px)");mediaQuery(y, z); (function() {var throttle = function(type, name, obj) {obj = obj || window;var running = false;var func = function() {if (running) { return; }running = true;requestAnimationFrame(function() {obj.dispatchEvent(new CustomEvent(name));running = false; });}; obj.addEventListener(type, func); }; throttle("resize", "optimizedResize"); })(); window.addEventListener("optimizedResize", function() { mediaQuery(y,z); });'
     
@@ -60,5 +72,5 @@ def carousel()
     write = temp + temp_media
     
     File.write('site/js/ad.js', write)
-    print "\nComplete\nad.js created \n"
+    print "\nCompleted tasks:\nad.js created \n"
 end

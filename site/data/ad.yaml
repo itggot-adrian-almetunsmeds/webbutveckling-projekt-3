@@ -21,3 +21,15 @@ popularad:
     mobile: 'something'
     tablet: 'something'
     href: 
+
+smartdevices:
+  - ad: '1'
+    desktop: 'test.jpg'
+    mobile: 'some123thing'
+    tablet: 'something'
+    href: 'random.org'
+  - ad: '2'
+    desktop: 'cart.svg'
+    mobile: 'something'
+    tablet: 'something'
+    href: 'dsjk'

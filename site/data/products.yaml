@@ -1,0 +1,26 @@
+- smartdevices:
+  - name: 'something'
+    price: 234kr
+    shortdesc: asdas 
+    longdesc: sad
+    img: ahj
+    alt: 23ds
+    technical: 
+    - platforms: windows
+      power: USB-C
+      connections: USB-C 3,5mm headphone
+      wireless_connectivity: WIFI 6
+  - name: 'something else'
+    price: 234kr
+    shortdesc: asdas 
+    longdesc: sad
+    img: ahj
+    alt: 23ds
+    technical: 
+    - platforms: windows
+      power: USB-C
+      connections: USB-C 3,5mm headphone
+      wireless_connectivity: WIFI 6
+- popular:
+- deals:
+- new:
