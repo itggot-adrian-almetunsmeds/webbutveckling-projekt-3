@@ -1,6 +1,8 @@
 require_relative './carousel.rb'
+require_relative './products.rb'
 
 carousel()
+product()
 
 layout('site/layout.html.erb')
 
@@ -14,4 +16,6 @@ ignore('site/css/cart.css.sass')
 ignore('site/css/footer.css.sass')
 ignore('site/css/header.css.sass')
 ignore('site/css/nav.css.sass')
+ignore('site/css/index.css.sass')
 ignore('carousel.rb')
+ignore('products.rb')
