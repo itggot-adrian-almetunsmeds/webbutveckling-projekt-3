@@ -1,30 +1,73 @@
-// Main ad courusel on index page
-var slideIndex = 0;
+// Carousel functions
+var slideIndex = [0, 0];
 
-function showSlides(index) {
-    let slides = document.querySelectorAll('.slide');
+function showSlides(index, num) {
+    num = parseInt(num + 1, 10);
+    let carousel = '.carousel' + num + ' > .slide';
+    let slides = document.querySelectorAll(carousel);
+    carousel = '.carousel' + num + ' > .circles > .slide_circle';
+    let buttons = document.querySelectorAll(carousel);
     for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = 'none'
+        slides[i].style.display = 'none';
+        buttons[i].style.backgroundColor = 'rgba(100,100,100,1)';
     }
-    slides[index].style.display = 'block'
+    slides[index].style.display = 'grid';
+    buttons[index].style.backgroundColor = 'black';
 }
 
-function changeSlide(input) {
+function changeSlide(input, num) {
     if (input == 1) {
-        slideIndex += 1
-    } else if (input == 0) {
-        slideIndex -= 1
+        slideIndex[num] += 1;
+    } else if (input == (-1)) {
+        slideIndex[num] -= 1;
     }
-    let slides = document.querySelectorAll('.slide');
-    if (slideIndex > (slides.length - 1)) {
-        slideIndex = 0
-    } else if (slideIndex < 0) {
-        slideIndex = slides.length - 1
+    num = parseInt(num, 10);
+    tempNum = num + 1;
+    let carousel = '.carousel' + tempNum + ' > .slide';
+    let slides = document.querySelectorAll(carousel);
+    if (slideIndex[num] > (slides.length - 1)) {
+        slideIndex[num] = 0;
+    } else if (slideIndex[num] < 0) {
+        slideIndex[num] = slides.length - 1;
     }
-    showSlides(slideIndex)
+
+    showSlides(slideIndex[num], num);
 }
 
-showSlides(0);
+function renderButtons(num) {
+    carousel = '.carousel' + num + ' > .slide';
+    let slides = document.querySelectorAll(carousel);
+    carousel = '.carousel' + num + ' > .circles';
+    let root = document.querySelector(carousel);
+    let buttons = [];
+    for (i = 0; i < slides.length; i++) {
+        let button = document.createElement('div');
+        button.classList.add('slide_circle');
+        buttons.push(button);
+    }
+    for (i = 0; i < buttons.length; i++) {
+        root.append(buttons[i]);
+    }
+}
+
+function autoChangeSlide() {
+    let p = document.getElementsByClassName('carousel');
+    for (l = 0; l < p.length; l++) {
+        changeSlide('1', l.toString());
+    }
+    setTimeout(autoChangeSlide, 5000);
+}
+renderButtons(1);
+renderButtons(2);
+showSlides(0, 0);
+showSlides(0, 1);
+autoChangeSlide();
+
+
+// console.log(screen.height)
+// console.log(screen.width)
+
+
 
 
 

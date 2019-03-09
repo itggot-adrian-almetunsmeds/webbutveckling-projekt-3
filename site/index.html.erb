@@ -1,20 +1,51 @@
-<div class="carousel">
-    <!-- TODO: ADD CONTENT AND A PROPER ALT TEXT -->
+<div class="carousel carousel1">
+
+    <% 
+        require 'yaml'
+        data =  YAML.load_file('data/ad.yaml')
+        i = 0
+        data['mainad'].each do | variable |
+        i += 1
+    %>
     <div class="slide">
-        <img src="" alt="This is only alt">
-        <div class="slide-text">
-            Text one
-        </div>
+        <div class="img" id="img<%= i %>"></div>
     </div>
 
-    <div class="slide">
-        <img src="" alt="This is only alt2">
-        <div class="slide-text">
-            Text two
-        </div>
+    <% 
+    end 
+    %>
+
+
+    <div class="circles">
     </div>
 
-    <a class="prev" onclick="changeSlide('-1')">Prev</a>
-    <a class="next" onclick="changeSlide('1')">next</a>
+    <a class="prev" onclick="changeSlide('-1', '0')">&#10094</a>
+    <a class="next" onclick="changeSlide('1', '0')">&#10095</a>
 
 </div>
+
+<span>THIS IS THE BREAK POINT</span>
+
+<div class="carousel carousel2">
+
+    <% 
+       data['mainad'].each do | variable |
+        i += 1
+    %>
+    <div class="slide">
+        <div class="img" id="img<%= i %>"></div>
+    </div>
+
+    <% 
+    end 
+    %>
+
+
+    <div class="circles">
+    </div>
+
+    <a class="prev" onclick="changeSlide('-1', '1')">&#10094</a>
+    <a class="next" onclick="changeSlide('1', '1')">&#10095</a>
+
+</div>
+<script src="js/ad.js"></script>

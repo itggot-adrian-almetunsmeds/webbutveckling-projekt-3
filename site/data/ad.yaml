@@ -1,0 +1,15 @@
+mainad:
+  - ad: '1'
+    img: 'test.jpg'
+    alt: 'something'
+  - ad: '2'
+    img: 'cart.svg'
+    alt: 'something'
+
+popularad:
+  - ad: '1'
+    img: 'test.jpg'
+    alt: 'something'
+  - ad: '2'
+    img: 'cart.svg'
+    alt: 'something'
