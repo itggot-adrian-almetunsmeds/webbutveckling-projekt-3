@@ -35,7 +35,7 @@
     margin: 3px
 .prev, .next 
     grid-area: img
-    z-index: 99
+    z-index: 1000
     cursor: pointer
     position: relative
     bottom: calc(256px/2)
@@ -43,14 +43,16 @@
     padding: 10px
     color: white
     font-weight: bold
-    font-size: 18px
+    font-size: 2rem
     transition: 0.6s ease
     border-radius: 0 3px 3px 0
     background-color: rgba(0,0,0,0.1)
 .prev
     left: 0
 .next
-    left: calc(100% - 60px) !important
+    // right: 0
+    max-width: 37px
+    left: calc(100% - 60px - 37.03px) !important
     border-radius: 3px 0 0 3px
 .prev:hover, .next:hover
     background-color: rgba(0,0,0,0.7)

@@ -1,15 +1,15 @@
 - smartdevices:
-  - name: 'something'
-    price: 234kr
-    shortdesc: asdas 
-    longdesc: sad
+  - name: 'UPhone'
+    price: 5000 SEK
+    shortdesc: A new and innovative device for the proletarian masses. A device for <b>you!<b>
+    longdesc: The UPhone is the latest device from U-Corp. Technologies. It comes loaded with all of the latest software and hardware fresh from the factory. It delivers unparraleled performace and battery life. This latest device is not only the hottest device in its price range but also the best device for you.
     img: ahj
-    alt: 23ds
+    alt: U-Phone
     technical: 
-    - platforms: windows
+    - platforms: U-Corp Industries Intertechonollogy
       power: USB-C
       connections: USB-C 3,5mm headphone
-      wireless_connectivity: WIFI 6
+      wireless_connectivity: WIFI 2
   - name: 'something else'
     price: 234kr
     shortdesc: asdas 

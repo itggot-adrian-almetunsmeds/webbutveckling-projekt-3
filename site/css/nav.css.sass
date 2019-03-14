@@ -1,16 +1,19 @@
+@import 'variable.css.sass'
+
 .nav
     position: fixed
     bottom: 0
     top: 0
     left: -65vw
     width: 60vw
-    background-color: grey
+    background-color: $text-color
     transition: all 0.3s
-    z-index: 100000000000000
+    z-index: 5000
     h4
         margin-left: 5px
-.active
-    left: 0
+    a
+        text-decoration: none
+        color: black
 .blur
     filter: blur(2px)
 .navback
@@ -21,4 +24,6 @@
     bottom: 0
     width: 100vw
     transition: all 0.3s
-    z-index: 10000000000000
+    z-index: 3
+.active
+    left: 0

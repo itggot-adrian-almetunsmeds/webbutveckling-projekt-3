@@ -6,9 +6,12 @@ out = ""
 ad = ""
 i = 0
 while i < 2
-    out='<div class="ad">' + ad + '</div><h2>' + data[0]['smartdevices'][i]['name'] + '</h2><img src=" img/ ' +
+    
+    out='<div class="product_page"> <div class="ad">' + ad + '</div><h2>' + data[0]['smartdevices'][i]['name'] + '</h2><img src=" img/ ' +
     data[0]['smartdevices'][i]['img'] + '" alt="' + data[0]['smartdevices'][i]['alt'] +'">
     <div class="desc">' + data[0]['smartdevices'][i]['longdesc'] + '</div>
+    <div class="price"><p> ' + data[0]['smartdevices'][i]['price'] + '</p> <div class="addcart"> Add to cart </div> </div>
+    <h3>Techical Specifications</h3>
     <table>
         <tr>
             <td>Platform</td>
@@ -26,7 +29,7 @@ while i < 2
             <td>Wireless connectivity</td>
             <td> ' + data[0]['smartdevices'][i]['technical'][0]['wireless_connectivity'] +'</td>
         </tr>
-    </table>'
+    </table> </div>'
     name = data[0]['smartdevices'][i]['name'].gsub(/\s/,'-') + '.html.erb'
     i += 1
     File.write('site/' + name, out)

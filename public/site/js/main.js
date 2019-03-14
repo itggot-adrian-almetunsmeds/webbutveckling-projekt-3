@@ -65,6 +65,11 @@ showSlides(0, 1);
 showSlides(0, 2);
 autoChangeSlide();
 
+function navToggle(){
+    document.querySelector('.nav').classList.toggle('active');
+    document.querySelector('.navback').classList.toggle('active');
+    document.querySelector('.wrapper').classList.toggle('blur');
+}
 
 // console.log(screen.height)
 // console.log(screen.width)

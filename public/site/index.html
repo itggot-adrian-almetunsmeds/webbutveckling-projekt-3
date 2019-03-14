@@ -22,10 +22,10 @@
             <h4>Smart devices</h4>
         </a>
     </div>
-    <div class="navback"></div>
+    <div class="navback" onclick="navToggle()"></div>
     <div class="wrapper">
         <header>
-            <i class="material-icons" id="menu">menu</i>
+            <i class="material-icons" id="menu" onclick="navToggle()">menu</i>
             <img src="img/cart.svg" alt="cart" id="cart">
         </header>
 
@@ -43,6 +43,12 @@
     </div>
     <a class="prev" onclick="changeSlide('-1', '0')">&#10094</a>
     <a class="next" onclick="changeSlide('1', '0')">&#10095</a>
+</div>
+
+<div class="buttons">
+    <a href="hot.html"><div class="button">HOT</div></a>
+    <a href="deals.html"><div class="button">DEALS</div></a>
+    <a href="new.html"><div class="button">NEW</div></a>
 </div>
 
 <h2>Popular</h2>
