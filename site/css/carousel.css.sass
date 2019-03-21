@@ -3,20 +3,23 @@
     margin-bottom: -40px
 .slide
     display: none
-    height: 200px
-    width: 100%
     grid-template-columns: auto auto
-    grid-template-rows: 200px 1px
+    grid-template-rows: calc(100vw / 3) 1px
     grid-template-areas: 'img img' 'indicators indicators'
+        
     .img
         position: relative
         top: 0
         left: 0
-        height: 100%
         width: 100%
         z-index: 0
         grid-area: img
-        background-size: cover
+        background-size: contain
+        background-repeat: no-repeat
+    // @media only screen  and (min-width : 1224px) 
+    //     grid-template-rows: 45vh 1px
+
+
 .circles
     z-index: 100
     width: 100%
@@ -38,7 +41,7 @@
     z-index: 1000
     cursor: pointer
     position: relative
-    bottom: calc(256px/2)
+    bottom: calc((100vw/3)/1.6)
     width: 35px !important
     padding: 10px
     color: white
@@ -52,7 +55,7 @@
 .next
     // right: 0
     max-width: 37px
-    left: calc(100% - 60px - 37.03px) !important
+    left: calc(100% - 41px - 37.03px) !important
     border-radius: 3px 0 0 3px
 .prev:hover, .next:hover
     background-color: rgba(0,0,0,0.7)

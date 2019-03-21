@@ -35,8 +35,10 @@ header {
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  background: #0038cb; }
   .wrapper .buttons .button {
+    margin: 4px;
     display: flex;
     justify-content: center;
     align-items: center; }
@@ -44,12 +46,12 @@ header {
     width: calc(100%/3);
     margin: 0 !important;
     border-width: 1px;
-    border-color: black;
+    border-color: #0061ff;
     border-style: solid;
     padding: 4px;
     display: block;
     text-decoration: none;
-    color: black; }
+    color: #ffffff; }
 
 .cart {
   width: 80vw;
@@ -74,20 +76,18 @@ footer {
 
 .slide {
   display: none;
-  height: 200px;
-  width: 100%;
   grid-template-columns: auto auto;
-  grid-template-rows: 200px 1px;
+  grid-template-rows: calc(100vw / 3) 1px;
   grid-template-areas: "img img" "indicators indicators"; }
   .slide .img {
     position: relative;
     top: 0;
     left: 0;
-    height: 100%;
     width: 100%;
     z-index: 0;
     grid-area: img;
-    background-size: cover; }
+    background-size: contain;
+    background-repeat: no-repeat; }
 
 .circles {
   z-index: 100;
@@ -112,7 +112,7 @@ footer {
   z-index: 1000;
   cursor: pointer;
   position: relative;
-  bottom: calc(256px/2);
+  bottom: calc((100vw/3)/1.6);
   width: 35px !important;
   padding: 10px;
   color: white;
@@ -127,7 +127,7 @@ footer {
 
 .next {
   max-width: 37px;
-  left: calc(100% - 60px - 37.03px) !important;
+  left: calc(100% - 41px - 37.03px) !important;
   border-radius: 3px 0 0 3px; }
 
 .prev:hover, .next:hover {
@@ -168,10 +168,15 @@ footer {
   display: grid;
   grid-template-rows: auto auto auto auto auto auto;
   grid-template-columns: auto auto;
-  grid-template-areas: "ad ad" "title title" "img desc2" "desc desc" "spectitle price" "spec spec";
+  margin: 0 5px 0 7px;
+  grid-template-areas: "ad ad" "title title" "img price" "desc desc" "spectitle nothing" "spec spec";
   grid-gap: 10px; }
   .product_page img {
-    grid-area: img; }
+    margin-left: 5px;
+    grid-area: img;
+    max-width: 30vw;
+    height: auto;
+    border-radius: 2px; }
   .product_page h3 {
     margin: 0 0 5px 5px;
     grid-area: spectitle;
@@ -184,11 +189,15 @@ footer {
     top: 0;
     left: 0;
     background: #0038cb;
-    padding: 3px;
+    padding: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #ffffff; }
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.2s; }
+  .product_page .addcart:hover {
+    border-radius: 15px; }
 
 .ad {
   grid-area: ad;
@@ -201,6 +210,8 @@ footer {
 .price {
   grid-area: price;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   border-radius: 5px; }
   .price p {
@@ -210,6 +221,26 @@ footer {
 table {
   grid-area: spec;
   margin-bottom: 10px;
-  border: solid 1px lightgrey; }
+  border: solid 1px #e6e6e6;
+  border-radius: 1px; }
   table tr:nth-child(2n+1) {
     background: lightgrey; }
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px; }
+  .items a {
+    text-decoration: none;
+    color: black; }
+  .items .item {
+    background: green;
+    max-width: 150px;
+    max-height: 150px;
+    width: 20vw;
+    height: 20vw;
+    display: flex;
+    align-items: bottom; }
+    .items .item a {
+      height: 100%;
+      vertical-align: bottom; }

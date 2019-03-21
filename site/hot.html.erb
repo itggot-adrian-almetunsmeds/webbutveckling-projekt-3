@@ -1,0 +1,22 @@
+<div class="items">
+
+    <%
+    require 'yaml' 
+
+        data =  YAML.load_file('data/products.yaml')
+        
+        i = 0
+    data[1]['hot'].each do |variable|
+    %>
+    <div class="item" id="<%= variable['name'].delete(' ') %>">
+        <a href="<%= variable['name'].gsub(/\s/,'-')+ ".html" %>">
+            <div class="name">
+                <%= variable['name'] %>
+            </div>
+        </a>
+    </div>
+
+
+    <% end
+    %>
+</div>

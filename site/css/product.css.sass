@@ -4,10 +4,15 @@
     display: grid
     grid-template-rows: auto auto auto auto auto auto
     grid-template-columns: auto auto
-    grid-template-areas: "ad ad" "title title" "img desc2" "desc desc" "spectitle price" "spec spec"
+    margin: 0 5px 0 7px
+    grid-template-areas: "ad ad" "title title" "img price" "desc desc" "spectitle nothing" "spec spec"
     grid-gap: 10px
     img
+        margin-left: 5px
         grid-area: img
+        max-width: 30vw
+        height: auto
+        border-radius: 2px
     h3
         margin: 0 0 5px 5px
         grid-area: spectitle
@@ -20,11 +25,15 @@
         top: 0
         left: 0
         background: $dark-color
-        padding: 3px
+        padding: 5px
         display: flex
         justify-content: center
         align-items: center
         color: $text-color
+        cursor: pointer
+        transition: all 0.2s
+    .addcart:hover
+        border-radius: 15px
 .ad
     grid-area: ad
     width: 100%
@@ -34,6 +43,8 @@
 .price
     grid-area: price
     display: flex
+    justify-content: center
+    align-items: center
     flex-wrap: wrap
     border-radius: 5px
     p
@@ -42,6 +53,7 @@
 table
     grid-area: spec
     margin-bottom: 10px
-    border: solid 1px lightgrey
+    border: solid 1px #e6e6e6
+    border-radius: 1px
     tr:nth-child(2n+1)
         background: lightgrey

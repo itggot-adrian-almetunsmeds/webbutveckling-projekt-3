@@ -1,26 +1,26 @@
 mainad:
   - ad: '1'
-    desktop: 'test.jpg'
-    mobile: 'something'
-    tablet: 'something'
+    desktop: 'woman_sofa_card_laptop@2560x854.jpeg'
+    mobile: 'woman_sofa_card_laptop@1280x427.jpeg' 
+    tablet: 'woman_sofa_card_laptop@1200x800.jpeg' #This one contains a image that do not excist FIXME:
     href: 'This is a link'
   - ad: '2'
-    desktop: 'cart.svg'
-    mobile: 'something'
-    tablet: 'something'
+    desktop: 'generic_headphones@2560x854.jpeg'
+    mobile: 'generic_headphones@500x167.jpeg'
+    tablet: 'generic_headphones@1280x427.jpeg'
     href: 'google.com'
 
 popularad:
   - ad: '1'
-    desktop: 'test.jpg'
-    mobile: 'some123thing'
-    tablet: 'something'
-    href: 'random.org'
+    desktop: 'light_bulb@2560x854.jpeg'
+    mobile: 'light_bulb@500x167.jpeg'
+    tablet: 'light_bulb@1280x427.jpeg'
+    href: 'hot.html'
   - ad: '2'
-    desktop: 'cart.svg'
-    mobile: 'something'
-    tablet: 'something'
-    href: 
+    desktop: 'security_camera@2560x854.jpeg'
+    mobile: 'security_camera@500x167.jpeg'
+    tablet: 'security_camera@1280x427.jpeg'
+    href: 'hot.html'
 
 smartdevices:
   - ad: '1'

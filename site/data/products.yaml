@@ -3,24 +3,30 @@
     price: 5000 SEK
     shortdesc: A new and innovative device for the proletarian masses. A device for <b>you!<b>
     longdesc: The UPhone is the latest device from U-Corp. Technologies. It comes loaded with all of the latest software and hardware fresh from the factory. It delivers unparraleled performace and battery life. This latest device is not only the hottest device in its price range but also the best device for you.
-    img: ahj
+    img: test.jpg # TODO:
     alt: U-Phone
     technical: 
     - platforms: U-Corp Industries Intertechonollogy
       power: USB-C
-      connections: USB-C 3,5mm headphone
+      connections: USB-C 3,5mm headphone Jack
       wireless_connectivity: WIFI 2
-  - name: 'something else'
-    price: 234kr
-    shortdesc: asdas 
-    longdesc: sad
+  - name: 'Bluespeaker smart speaker'
+    price: 234 SEK
+    shortdesc: A small and elegant speaker with superior sound quality. 
+    longdesc: Bluespeakers first smart speaker incorperating all of the available smart systems. 
     img: ahj
-    alt: 23ds
+    alt: 23ds # TODO:
     technical: 
-    - platforms: windows
+    - platforms: Android, iOS, Linux, Windows, MacOS, Wear OS, Tizen, Fitbit
       power: USB-C
-      connections: USB-C 3,5mm headphone
-      wireless_connectivity: WIFI 6
-- popular:
+      connections: USB-C 3,5mm headphone Jack  
+      wireless_connectivity: WIFI 6 Bluetooth
+- hot:
+  - name: UPhone
+    img:
+  - name: something else
+    img:
+  - name: Bluespeaker smart speaker
+    img: 
 - deals:
 - new:
