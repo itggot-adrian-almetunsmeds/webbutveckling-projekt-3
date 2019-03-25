@@ -4,66 +4,86 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>Generic webbshop</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
-    <div class="nav">
-        <a href="index.html">
-            <h4>Home</h4>
-        </a>
-        <a href="">
-            <h4>Popular</h4>
-        </a>
-        <a href="">
-            <h4>Smart devices</h4>
-        </a>
+    <div class="nav mobile">
+        <div class="menu_items">
+            <a href="index.html">
+                <h4>Home</h4>
+            </a>
+            <a href="hot.html">
+                <h4>Popular</h4>
+            </a>
+            <a href="deals.html">
+                <h4>Deals</h4>
+            </a>
+            <a href="new.html">
+                <h4>New Items</h4>
+            </a>
+            <div class="menu_bottom">
+                <a href="about.html">
+                    <h4>About us</h4>
+                </a>
+            </div>
+        </div>
     </div>
     <div class="navback" onclick="navToggle()"></div>
     <div class="wrapper">
+        <div class="nav desktop">
+            <div class="menu_items">
+                <a href="index.html">
+                    <h4>Home</h4>
+                </a>
+                <a href="hot.html">
+                    <h4>Popular</h4>
+                </a>
+                <a href="deals.html">
+                    <h4>Deals</h4>
+                </a>
+                <a href="new.html">
+                    <h4>New Items</h4>
+                </a>
+                <div class="menu_bottom">
+                    <a href="about.html">
+                        <h4>About us</h4>
+                    </a>
+                </div>
+            </div>
+        </div>
         <header>
             <i class="material-icons" id="menu" onclick="navToggle()">menu</i>
             <img src="img/cart.svg" alt="cart" id="cart">
         </header>
-
-        <div class="items">
+        <div class="content">
+            <h2 class="subpage_title">Hot items´</h2>
+<div class="items">
 
     
-    <div class="item" id="UPhone">
-        <a href="UPhone.html">
+
+    <a href="UPhone.html">
+        <img src="img/generic_phone@300x300.jpeg" alt="">
             <div class="name">
                 UPhone
             </div>
-        </a>
-    </div>
-
+    </a>
 
     
-    <div class="item" id="somethingelse">
-        <a href="something-else.html">
-            <div class="name">
-                something else
-            </div>
-        </a>
-    </div>
 
-
-    
-    <div class="item" id="Bluespeakersmartspeaker">
-        <a href="Bluespeaker-smart-speaker.html">
+    <a href="Bluespeaker-smart-speaker.html">
+        <img src="img/smart_speaker@300x300.jpeg" alt="">
             <div class="name">
                 Bluespeaker smart speaker
             </div>
-        </a>
-    </div>
-
+    </a>
 
     
 </div>
-
+        </div>
     </div>
 
     <footer>

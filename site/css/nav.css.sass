@@ -1,5 +1,4 @@
 @import 'variable.css.sass'
-
 .nav
     position: fixed
     bottom: 0
@@ -9,6 +8,10 @@
     background-color: $text-color
     transition: all 0.3s
     z-index: 5000
+    // display: flex
+    // flex-wrap: wrap
+    // flex-direction: column
+    // justify-content: space-between
     h4
         margin-left: 5px
     a
@@ -27,3 +30,23 @@
     z-index: 3
 .active
     left: 0
+@media only screen  and (min-width : 850px) 
+    .mobile
+        display: none
+    .desktop
+        border-right: solid black 1px
+        grid-row: 2
+        grid-column: 1
+        width: 100%
+        position: sticky
+        top: 0
+        left: 0
+        bottom: 0
+.menu_items
+    position: relative
+    height: 100%
+.menu_bottom
+    position: absolute
+    left: 0
+    bottom: 0
+    margin-bottom: 20px

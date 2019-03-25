@@ -1,19 +1,31 @@
+@import 'variable.css.sass'
+.subpage_title
+    margin: 10px
+
 .items
     display: flex
     flex-wrap: wrap
-    // margin: auto
-    padding: 10px
+    justify-content: center
+    align-items: center
     a
         text-decoration: none
         color: black
-    .item
+        margin: 20px
         background: green
-        max-width: 150px
-        max-height: 150px
-        width: 20vw
-        height: 20vw
-        display: flex
-        align-items: bottom
-        a          
-            height: 100%
-            vertical-align: bottom
+        max-width: 200px
+        max-height: 200px
+        width: 36vw
+        height: 36vw
+    img
+        height: 100%
+        width: 100%
+        border-radius: 2px
+    .name
+        position: relative
+        bottom: 5px
+        transform: translateY(-100%)
+        left: 0
+        background-color: rgba(0,0,0,0.5)
+        color: $text-color
+        text-align: center
+        border-radius: 0 0 2px 2px

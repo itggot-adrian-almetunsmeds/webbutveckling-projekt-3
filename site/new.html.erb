@@ -1,4 +1,4 @@
-<h2 class="subpage_title">Hot items´</h2>
+<h2 class="subpage_title">New items´</h2>
 <div class="items">
 
     <%
@@ -7,7 +7,7 @@
         data =  YAML.load_file('data/products.yaml')
 
         i = 0
-    data[1]['hot'].each do |variable|
+    data[3]['new'].each do |variable|
     %>
 
     <a href="<%= variable['name'].gsub(/\s/,'-')+ ".html" %>">

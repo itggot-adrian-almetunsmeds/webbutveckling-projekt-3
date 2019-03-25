@@ -8,11 +8,18 @@ header
     background: $primary-color
     height: 44px
     z-index: 100000
+    grid-column: span 2
+    @media only screen and (min-width : 850px) 
+        .material-icons
+            display: none
+    
 #menu
     position: fixed
     top: 10px
     left: 10px
+    transition: all 1s ease
 #cart
     position: fixed
     top: 10px
     right: 24px
+    transition: all 1s ease

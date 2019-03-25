@@ -57,15 +57,18 @@ function autoChangeSlide() {
     }
     setTimeout(autoChangeSlide, 5000);
 }
-renderButtons(1);
-renderButtons(2);
-renderButtons(3);
-showSlides(0, 0);
-showSlides(0, 1);
-showSlides(0, 2);
-autoChangeSlide();
 
-function navToggle(){
+function init() {
+    renderButtons(1);
+    renderButtons(2);
+    renderButtons(3);
+    showSlides(0, 0);
+    showSlides(0, 1);
+    showSlides(0, 2);
+    autoChangeSlide();
+}
+
+function navToggle() {
     document.querySelector('.nav').classList.toggle('active');
     document.querySelector('.navback').classList.toggle('active');
     document.querySelector('.wrapper').classList.toggle('blur');

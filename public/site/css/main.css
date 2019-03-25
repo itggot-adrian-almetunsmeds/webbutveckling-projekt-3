@@ -4,6 +4,18 @@ body {
   min-height: 100vh;
   width: 100%; }
 
+@media only screen and (min-width: 850px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 15vw auto;
+    grid-template-rows: auto auto auto; } }
+
+.content {
+  grid-row: 2;
+  grid-column: 2;
+  width: 100%;
+  height: 100%; }
+
 .show {
   display: block; }
 
@@ -17,17 +29,23 @@ header {
   width: 100%;
   background: #0061ff;
   height: 44px;
-  z-index: 100000; }
+  z-index: 100000;
+  grid-column: span 2; }
+  @media only screen and (min-width: 850px) {
+    header .material-icons {
+      display: none; } }
 
 #menu {
   position: fixed;
   top: 10px;
-  left: 10px; }
+  left: 10px;
+  transition: all 1s ease; }
 
 #cart {
   position: fixed;
   top: 10px;
-  right: 24px; }
+  right: 24px;
+  transition: all 1s ease; }
 
 .wrapper h2 {
   margin: 0 0 0 8px; }
@@ -36,7 +54,11 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #0038cb; }
+  background: #0038cb;
+  position: sticky;
+  top: 44px;
+  left: 0;
+  z-index: 99999; }
   .wrapper .buttons .button {
     margin: 4px;
     display: flex;
@@ -67,8 +89,13 @@ footer {
   background-color: #0061ff;
   width: 100%;
   padding: 5px 0 5px 0;
-  text-align: center;
-  color: #ffffff; }
+  max-height: 90px; }
+  footer p {
+    text-align: center;
+    color: #ffffff; }
+  @media only screen and (min-width: 850px) {
+    footer {
+      grid-column: span 2; } }
 
 .carousel {
   padding: 10px 0 10px 0;
@@ -164,17 +191,41 @@ footer {
 .active {
   left: 0; }
 
+@media only screen and (min-width: 850px) {
+  .mobile {
+    display: none; }
+
+  .desktop {
+    border-right: solid black 1px;
+    grid-row: 2;
+    grid-column: 1;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0; } }
+.menu_items {
+  position: relative;
+  height: 100%; }
+
+.menu_bottom {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin-bottom: 20px; }
+
 .product_page {
   display: grid;
   grid-template-rows: auto auto auto auto auto auto;
   grid-template-columns: auto auto;
   margin: 0 5px 0 7px;
-  grid-template-areas: "ad ad" "title title" "img price" "desc desc" "spectitle nothing" "spec spec";
+  grid-template-areas: "ad ad" "title title" "img price" "desc desc" "spectitle spectitle" "spec spec";
   grid-gap: 10px; }
   .product_page img {
     margin-left: 5px;
     grid-area: img;
-    max-width: 30vw;
+    max-width: 30vh;
+    max-height: 30vh;
     height: auto;
     border-radius: 2px; }
   .product_page h3 {
@@ -226,21 +277,33 @@ table {
   table tr:nth-child(2n+1) {
     background: lightgrey; }
 
+.subpage_title {
+  margin: 10px; }
+
 .items {
   display: flex;
   flex-wrap: wrap;
-  padding: 10px; }
+  justify-content: center;
+  align-items: center; }
   .items a {
     text-decoration: none;
-    color: black; }
-  .items .item {
+    color: black;
+    margin: 20px;
     background: green;
-    max-width: 150px;
-    max-height: 150px;
-    width: 20vw;
-    height: 20vw;
-    display: flex;
-    align-items: bottom; }
-    .items .item a {
-      height: 100%;
-      vertical-align: bottom; }
+    max-width: 200px;
+    max-height: 200px;
+    width: 36vw;
+    height: 36vw; }
+  .items img {
+    height: 100%;
+    width: 100%;
+    border-radius: 2px; }
+  .items .name {
+    position: relative;
+    bottom: 5px;
+    transform: translateY(-100%);
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    text-align: center;
+    border-radius: 0 0 2px 2px; }

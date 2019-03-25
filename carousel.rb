@@ -6,7 +6,7 @@ def carousel()
     #  TODO: make this variable dynamic based on number of "ads"
     # It is currently semi dynamic
     time = time/5
-    
+
     stored = []
     value = []
     while stored.length < time
@@ -62,9 +62,7 @@ def carousel()
     end
     
     temp_media = 'function mediaQuery(y, z) { if (z.matches) {' + mobile + '} else if (y.matches) {' + tablet + '} else {' + desktop + '}}var y = window.matchMedia("(max-width: 1024px)");var z = window.matchMedia("(max-width: 480px)");mediaQuery(y, z); (function() {var throttle = function(type, name, obj) {obj = obj || window;var running = false;var func = function() {if (running) { return; }running = true;requestAnimationFrame(function() {obj.dispatchEvent(new CustomEvent(name));running = false; });}; obj.addEventListener(type, func); }; throttle("resize", "optimizedResize"); })(); window.addEventListener("optimizedResize", function() { mediaQuery(y,z); });'
-    
-    
-    
+
     temp = ""
     output.each do |variable|
         temp += variable
