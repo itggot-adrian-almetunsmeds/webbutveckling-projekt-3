@@ -75,41 +75,60 @@ function navToggle() {
     document.querySelector('footer').classList.toggle('blur');
 }
 
-// console.log(screen.height)
-// console.log(screen.width)
 
+function renderCart(name, quantity, price){
+    let rootList = document.querySelector('.cart_content');
+    let item = document.createElement('div');
+    item.classList.add('cartItem')
+    let itemName = document.createElement('p');
+    itemName.innerHTML = name;
+    let itemPrice = document.createElement('p');
+    itemPrice.innerHTML = price;
+    itemPrice.classList.add('price')
 
-
-
-
-// shoppingCartAdd('hey', 'potatis', '124kr', '10', '199')
-// shoppingCart()
-
-function shoppingCartAdd(title, desc, price, saldo, quantity) {
-    let temp = [title, desc, price, saldo, quantity];
-    // let cart = sessionStorage.getItem('cart');
-    // cartStorage = JSON.parse(cart)
-    // console.log(cartStorage)
-    console.log(sessionStorage.getItem('cart'))
-
-    if (cartStorage == null) {
-        var cart = []
-    }
-    cart.push(temp)
+    // Quantity
+    quant = document.createElement('div');
+    quant.classList.add('quant');
+    let itemQuantity = document.createElement('div');
+    itemQuantity.classList.add('quantity')
+    let buttonAdd = document.createElement('div');
+    buttonAdd.innerHTML = '+';
+    buttonAdd.classList.add('addButton');
+    let itemQ = document.createElement('p');
+    itemQ.innerHTML = quantity;
+    let buttonRemove = document.createElement('div');
+    buttonRemove.innerHTML = '-';
+    buttonRemove.classList.add('removeButton');
+    itemQuantity.append(buttonRemove);
+    itemQuantity.append(itemQ);
+    itemQuantity.append(buttonAdd);
+    quant.append(itemQuantity)
+    
+    item.append(itemName);
+    item.append(quant);
+    item.append(itemPrice);
+    rootList.append(item);
+    sum()
 }
 
-function shoppingCart(event) {
-    let base = document.querySelector('.cart_content');
-    let rootChild = document.createElement('div')
-    rootChild.classList.add('product_group')
-    let product = document.createElement('h4');
-    product.classList.add('cart_product');
-    let price = document.createElement('p');
-    price.classList.add('cart_price');
-    let description = document.createElement('p');
-    description.classList.add('cart_description');
-    base.append(rootChild);
-    base.appendChild(product);
-    base.appendChild(description);
-    base.appendChild(price);
+function sum(){
+    let sum = document.querySelector('.sum');
+    sum.innerHTML = '<b>Total sum:  </b>' + localStorage.getItem('sum');
+}
+
+function addItemToCart(array){
+    let cart = JSON.parse(localStorage.getItem('cart'));
+    let price = Number(localStorage.getItem('sum'));
+    console.log(price)
+    if (cart != null){
+        cart.push(array)
+        price += array[2]
+    } else {
+        cart = [array]
+        price = array[2]
+    }
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+    localStorage.setItem('sum', price);
+    console.log('Item added to cart.')
 }

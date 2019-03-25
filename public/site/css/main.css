@@ -76,20 +76,65 @@ header {
     color: #ffffff; }
 
 .cart {
-  width: 80vw;
-  background-color: yellow; }
+  width: 100%; }
+
+.nothing {
+  text-align: center;
+  margin: 30px auto 30px auto !important; }
 
 .cart_content {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: auto auto auto;
-  grid-template-areas: "image title none" "image description price" "image saldo none"; }
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+  height: 100%;
+  justify-content: center;
+  align-items: center; }
+  .cart_content p {
+    vertical-align: middle;
+    padding: 3px; }
+  .cart_content .cartItem:nth-child(2n) {
+    background: dimgrey; }
+    .cart_content .cartItem:nth-child(2n) .removeButton, .cart_content .cartItem:nth-child(2n) .addButton {
+      color: #ffffff !important; }
+  .cart_content .cartItem {
+    border: solid rgba(0, 0, 0, 0.4) 0.5px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 40vw 60px auto;
+    grid-template-rows: auto;
+    grid-gap: 3px; }
+    .cart_content .cartItem .quantity {
+      height: 70%;
+      border: solid rgba(0, 0, 0, 0.4) 1px;
+      display: grid;
+      grid-template-columns: 20px auto 20px; }
+      .cart_content .cartItem .quantity .removeButton, .cart_content .cartItem .quantity .addButton, .cart_content .cartItem .quantity p {
+        background: rgba(0, 0, 0, 0.2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black; }
+      .cart_content .cartItem .quantity p {
+        padding: 3px;
+        background: white;
+        margin: 0;
+        color: black; }
+    .cart_content .cartItem .price {
+      grid-row: 1;
+      grid-column: 3; }
+  .cart_content .quant {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
 
 footer {
   background-color: #0061ff;
   width: 100%;
   padding: 5px 0 5px 0;
   max-height: 90px; }
+  footer a {
+    text-decoration: none;
+    color: #ffffff; }
   footer p {
     text-align: center;
     color: #ffffff; }
@@ -206,7 +251,8 @@ footer {
     bottom: 0; } }
 .menu_items {
   position: relative;
-  height: 100%; }
+  height: 100%;
+  min-height: 80vh; }
 
 .menu_bottom {
   position: absolute;

@@ -57,7 +57,7 @@
         </div>
         <header>
             <i class="material-icons" id="menu" onclick="navToggle()">menu</i>
-            <img src="img/cart.svg" alt="cart" id="cart">
+            <a href="cart.html"><img src="img/cart.svg" alt="cart" id="cart"></a>
         </header>
         <div class="content">
             <div class="product_page"> <div class="ad"></div><h2>Bluespeaker smart speaker</h2>
@@ -65,7 +65,7 @@
         <div class="desc">Bluespeakers first smart speaker incorperating all of the available smart systems.</div>
         <div class="price">
         <p> 2999 SEK</p>
-        <div class="addcart"> Add to cart </div>
+        <div class="addcart" onclick="addItemToCart(['Bluespeaker smart speaker', 1, '2999'])"> Add to cart </div>
         </div>
         <h3>Techical Specifications</h3>
         <table>
@@ -91,6 +91,7 @@
     </div>
 
     <footer>
+        <a href="about.html"><p>About us</p></a>
         <p>Please do not try to buy anything from this page as none of these items are for sale.</p>
     </footer>
 </body>

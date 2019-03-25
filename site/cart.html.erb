@@ -13,3 +13,21 @@
 
     </div>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', (e) => {
+        let cart = JSON.parse(localStorage.getItem('cart'));
+        if (cart == null) {
+            let rootList = document.querySelector('.cart_content');
+            let nothing = document.createElement('h2');
+            nothing.classList.add('nothing')
+            nothing.innerHTML = "You have not added any products to the cart yet.";
+            rootList.append(nothing)
+        } else {
+            for(i = 0; i < cart.length; i++){
+                renderCart(cart[i][0],cart[i][1], cart[i][2] )
+
+            }
+        }
+    });
+</script>

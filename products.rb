@@ -6,12 +6,13 @@ def product()
     ad = ""
     i = 0
     while i < 2 
+        thing = "'#{data[0]['smartdevices'][i]['name']}', 1, '#{data[0]['smartdevices'][i]['price'].gsub(/\s.+/, '')}'"
         out='<div class="product_page"> <div class="ad">' + ad + '</div><h2>' + data[0]['smartdevices'][i]['name'] + '</h2>
         <img src=" img/' + data[0]['smartdevices'][i]['img'] + '" alt="' + data[0]['smartdevices'][i]['alt'] +'">
         <div class="desc">' + data[0]['smartdevices'][i]['longdesc'] + '</div>
         <div class="price">
         <p> ' + data[0]['smartdevices'][i]['price'] + '</p>
-        <div class="addcart"> Add to cart </div>
+        <div class="addcart" onclick="addItemToCart([' + thing + '])"> Add to cart </div>
         </div>
         <h3>Techical Specifications</h3>
         <table>
