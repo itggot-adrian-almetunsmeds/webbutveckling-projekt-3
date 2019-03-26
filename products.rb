@@ -5,7 +5,9 @@ def product()
     out = ""
     ad = ""
     i = 0
-    while i < 2 
+    number_of_products = 4
+
+    while i < number_of_products
         if data[0]['devices'][i]['deal'] != nil
             thing = "'#{data[0]['devices'][i]['name']}', 1, '#{data[0]['devices'][i]['price'].gsub(/\s.+/, '')}'"
     

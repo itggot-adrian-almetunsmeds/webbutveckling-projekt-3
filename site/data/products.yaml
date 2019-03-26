@@ -22,6 +22,29 @@
       connections: USB-C 3,5mm headphone Jack  
       wireless_connectivity: WIFI 6 Bluetooth
     deal: 10%
+  - name: 'Exclusive headphones'
+    price: 250 SEK
+    shortdesc:
+    longdesc: 'Turn your sound in to a real HI-FI experiance with these exclusive one of a kind headphones. Featuring world class technology providing deep base and clear high´s and midz. Use Dolby Surround technollogy to boost the dynamic range. With the included Windows application you have the ability to change equalizer settings depending on the currently launched programs. With excellent background-noice filtering guarantees the best experiance.'
+    img: 'generic_headphones_product@300x300.jpeg'
+    alt: 'A pair of awsome black headphones on a yellow surface'
+    technical:
+    - platforms: All
+      power: 3,5mm headphone Jack
+      connections: 3,5mm headphone Jack
+      wireless_connectivity: '-'
+  - name: 'Gaming mouse'
+    price: 800 SEK
+    shortdesc:
+    longdesc: 'A comfortable gaming mouse with adjustable weight for the perfect fealing. DPI ranging from 20-2000 means the 360 no-scopes are going to get even easier. Or if using drawing programs alot this mouse is going to be your perfect companion. Draw in a straigt line, draw in a circle or draw just as wonky as youd like. This mouse provides all the options.'
+    img: 'computer_mouse_blue@300x300.png'
+    alt: 'A blue gaming mouse'
+    technical:
+    - platforms: Windows 10, Windows 8, Windows 8.1, Ubunto, Linux Mint, Raspbian
+      power: USB-C
+      connections: USB-C
+      wireless_connectivity: '-'
+    deal: 40%
 - hot:
   - name: UPhone
     img: generic_phone@300x300.jpeg
@@ -29,15 +52,18 @@
   - name: Bluespeaker smart speaker
     img: smart_speaker@300x300.jpeg
     alt: A smart speaker
+  - name: Exclusive headphones
+    img: 'generic_headphones_product@300x300.jpeg'
+    alt: 'A pair of awsome black awsome headphones on a yellow surface'
 - deals:
-  - name: UPhone
-    img: generic_phone@300x300.jpeg
-    alt: U-Phone
-    deal: 0%
   - name: Bluespeaker smart speaker
     img: smart_speaker@300x300.jpeg
     alt: A smart speaker
     deal: 10%
+  - name: 'Gaming mouse'
+    img: 'computer_mouse_blue@300x300.png'
+    alt: 'The perfect gaming mouse'
+    deal: 40%
 - new:
   - name: UPhone
     img: generic_phone@300x300.jpeg

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Generic webbshop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" href="img/favicon.png">
+</head>
+
+<body>
+    <div class="nav mobile">
+        <div class="menu_items">
+            <a href="index.html">
+                <h4>Home</h4>
+            </a>
+            <a href="hot.html">
+                <h4>Popular</h4>
+            </a>
+            <a href="deals.html">
+                <h4>Deals</h4>
+            </a>
+            <a href="new.html">
+                <h4>New Items</h4>
+            </a>
+            <div class="menu_bottom">
+                <a href="about.html">
+                    <h4>About us</h4>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="navback" onclick="navToggle()"></div>
+    <div class="wrapper">
+        <div class="nav desktop">
+            <div class="menu_items">
+                <a href="index.html">
+                    <h4>Home</h4>
+                </a>
+                <a href="hot.html">
+                    <h4>Popular</h4>
+                </a>
+                <a href="deals.html">
+                    <h4>Deals</h4>
+                </a>
+                <a href="new.html">
+                    <h4>New Items</h4>
+                </a>
+                <div class="menu_bottom">
+                    <a href="about.html">
+                        <h4>About us</h4>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <header>
+            <i class="material-icons" id="menu" onclick="navToggle()">menu</i>
+            <a href="cart.html"><img src="img/cart.svg" alt="cart" id="cart"></a>
+        </header>
+        <div class="content">
+            <div class="product_page"> <div class="ad"></div><h2>Gaming mouse</h2>
+        <img src=" img/computer_mouse_blue@300x300.png" alt="A blue gaming mouse">
+        <div class="desc">A comfortable gaming mouse with adjustable weight for the perfect fealing. DPI ranging from 20-2000 means the 360 no-scopes are going to get even easier. Or if using drawing programs alot this mouse is going to be your perfect companion. Draw in a straigt line, draw in a circle or draw just as wonky as youd like. This mouse provides all the options.</div>
+        <div class="price">
+        <p> 800 SEK</p> <p> Save 40% </p>
+            <div class="addcart" onclick="addItemToCart(['Gaming mouse', 1, '800'])"> Add to cart </div>
+        </div>
+        <h3>Techical Specifications</h3>
+        <table>
+        <tr>
+        <td>Platform</td>
+        <td>Windows 10, Windows 8, Windows 8.1, Ubunto, Linux Mint, Raspbian</td>
+        </tr>
+        <tr>
+        <td>Power Source</td>
+        <td>USB-C</td>
+        </tr>
+        <tr>
+        <td>Cable connections</td>
+        <td>USB-C </td>
+        </tr>
+        <tr>
+        <td>Wireless connectivity</td>
+        <td> -</td>
+        </tr>
+        </table>
+        </div>
+        </div>
+    </div>
+
+    <footer>
+        <a href="about.html"><p>About us</p></a>
+        <p>Please do not try to buy anything from this page as none of these items are for sale.</p>
+    </footer>
+</body>
+<script src="js/main.js"></script>
+
+</html>

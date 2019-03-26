@@ -108,6 +108,7 @@ header {
     grid-gap: 3px; }
     .cart_content .cartItem .quantity {
       height: 70%;
+      max-height: 40px;
       border: solid rgba(0, 0, 0, 0.4) 1px;
       display: grid;
       grid-template-columns: 20px auto 20px; }
