@@ -8,10 +8,16 @@
 
         i = 0
     data[2]['deals'].each do |variable|
+        if variable['deal'] != nil
+            thing = '<div class="off">' + variable['deal'] + ' off!</div>'
+        else
+            thing = ""
+        end
     %>
 
     <a href="<%= variable['name'].gsub(/\s/,'-')+ ".html" %>">
         <img src="img/<%= variable['img'] %>" alt="">
+            <%= thing %>
             <div class="name">
                 <%= variable['name'] %>
             </div>

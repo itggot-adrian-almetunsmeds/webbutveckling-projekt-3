@@ -1,4 +1,4 @@
-- smartdevices:
+- devices:
   - name: 'UPhone'
     price: 5000 SEK
     shortdesc: A new and innovative device for the proletarian masses. A device for <b>you!<b>
@@ -21,6 +21,7 @@
       power: USB-C
       connections: USB-C 3,5mm headphone Jack  
       wireless_connectivity: WIFI 6 Bluetooth
+    deal: 10%
 - hot:
   - name: UPhone
     img: generic_phone@300x300.jpeg
