@@ -1,14 +1,14 @@
 mainad:
   - ad: '1'
     desktop: 'woman_sofa_card_laptop@2560x854.jpeg'
-    mobile: 'woman_sofa_card_laptop@1280x427.jpeg' 
-    tablet: 'woman_sofa_card_laptop@1200x800.jpeg' #This one contains a image that do not excist FIXME:
-    href: 'This is a link'
+    mobile: 'woman_sofa_card_laptop@500x167.jpeg'
+    tablet: 'woman_sofa_card_laptop@1280x427.jpeg'
+    href: 'hot.html'
   - ad: '2'
     desktop: 'generic_headphones@2560x854.jpeg'
     mobile: 'generic_headphones@500x167.jpeg'
     tablet: 'generic_headphones@1280x427.jpeg'
-    href: 'google.com'
+    href: 'google.com' #This link goes to nowhere useful. FIXME:
 
 popularad:
   - ad: '1'
@@ -24,12 +24,12 @@ popularad:
 
 smartdevices:
   - ad: '1'
-    desktop: 'test.jpg'
-    mobile: 'some123thing'
-    tablet: 'something'
-    href: 'random.org'
+    desktop: 'phone_banner@2560x854.jpeg'
+    mobile: 'phone_banner@500x167.jpeg'
+    tablet: 'phone_banner@1280x427.jpg'
+    href: 'UPhone.html'
   - ad: '2'
-    desktop: 'cart.svg'
-    mobile: 'something'
-    tablet: 'something'
-    href: 'dsjk'
+    desktop: 'smart_speaker_banner@2560x854.jpeg'
+    mobile: 'smart_speaker_banner@500x167.jpeg'
+    tablet: 'smart_speaker_banner@1280x427.jpeg'
+    href: 'Bluespeaker-smart-speaker.html'

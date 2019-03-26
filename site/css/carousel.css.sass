@@ -4,8 +4,11 @@
 .slide
     display: none
     grid-template-columns: auto auto
-    grid-template-rows: calc(100vw / 3) 1px
+    grid-template-rows: calc( 100vw / 3) 1px
     grid-template-areas: 'img img' 'indicators indicators'
+    @media only screen  and (min-width : 850px) 
+        grid-template-rows: calc((100vw - 15vw )/ 3) 1px
+
         
     .img
         position: relative
@@ -16,8 +19,6 @@
         grid-area: img
         background-size: contain
         background-repeat: no-repeat
-    // @media only screen  and (min-width : 1224px) 
-    //     grid-template-rows: 45vh 1px
 
 
 .circles
@@ -41,7 +42,10 @@
     z-index: 1000
     cursor: pointer
     position: relative
-    bottom: calc((100vw/3)/1.6)
+    @media only screen  and (min-width : 850px) 
+        bottom: calc(((100vw - 15vw)/3)/1.6)
+
+    bottom: calc((100vw /3)/1.6)
     width: 35px !important
     padding: 10px
     color: white

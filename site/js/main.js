@@ -113,7 +113,7 @@ function renderCart(name, quantity, price){
 
 function sum(){
     let sum = document.querySelector('.sum');
-    sum.innerHTML = '<b>Total sum:  </b>' + localStorage.getItem('sum');
+    sum.innerHTML = '<b>Total sum:  </b>' + localStorage.getItem('sum') + ' SEK';
 }
 
 function addItemToCart(array){
@@ -122,10 +122,10 @@ function addItemToCart(array){
     console.log(price)
     if (cart != null){
         cart.push(array)
-        price += array[2]
+        price += Number(array[2])
     } else {
         cart = [array]
-        price = array[2]
+        price = Number(array[2])
     }
 
     localStorage.setItem('cart', JSON.stringify(cart));
