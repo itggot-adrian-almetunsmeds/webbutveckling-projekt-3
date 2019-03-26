@@ -52,6 +52,7 @@
   - name: Bluespeaker smart speaker
     img: smart_speaker@300x300.jpeg
     alt: A smart speaker
+    deal: 10%
   - name: Exclusive headphones
     img: 'generic_headphones_product@300x300.jpeg'
     alt: 'A pair of awsome black awsome headphones on a yellow surface'

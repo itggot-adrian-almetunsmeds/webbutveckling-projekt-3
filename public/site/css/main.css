@@ -384,11 +384,12 @@ table {
     max-height: 200px;
     width: 36vw;
     height: 36vw;
-    position: relative; }
+    position: relative;
+    border-radius: 3px; }
   .items img {
     height: 100%;
     width: 100%;
-    border-radius: 2px; }
+    border-radius: 3px; }
   .items .name {
     position: relative;
     bottom: 5px;
@@ -397,7 +398,7 @@ table {
     background-color: rgba(0, 0, 0, 0.5);
     color: #ffffff;
     text-align: center;
-    border-radius: 0 0 2px 2px; }
+    border-radius: 0 0 3px 3px; }
 
 .about {
   margin: 20px;
