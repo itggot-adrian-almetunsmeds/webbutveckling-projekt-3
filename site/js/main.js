@@ -140,6 +140,8 @@ function changeQ(name, change) {
         rootList.removeChild(rootList.firstChild);
     }
     if (cart.length > 0) {
+        document.querySelector(".checkout").style.display = 'flex'
+        document.querySelector(".sum > p").style.display = 'block'
 
         for (i = 0; i < cart.length; i++) {
             renderCart(cart[i][0], cart[i][1], cart[i][2])
@@ -150,6 +152,9 @@ function changeQ(name, change) {
         nothing.classList.add('nothing')
         nothing.innerHTML = "You have not added any products to the cart yet.";
         rootList.append(nothing)
+        document.querySelector(".checkout").style.display = 'none'
+        document.querySelector(".sum > p").style.display = 'none'
+
     }
 }
 
