@@ -154,7 +154,6 @@ function changeQ(name, change) {
         rootList.append(nothing)
         document.querySelector(".checkout").style.display = 'none'
         document.querySelector(".sum > p").style.display = 'none'
-
     }
 }
 
