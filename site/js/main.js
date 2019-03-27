@@ -75,15 +75,14 @@ function navToggle() {
     document.querySelector('footer').classList.toggle('blur');
 }
 
-
-function renderCart(name, quantity, price){
+function renderCart(name, quantity, price) {
     let rootList = document.querySelector('.cart_content');
     let item = document.createElement('div');
     item.classList.add('cartItem')
     let itemName = document.createElement('p');
     itemName.innerHTML = name;
     let itemPrice = document.createElement('p');
-    itemPrice.innerHTML = price;
+    itemPrice.innerHTML = price + " SEK";
     itemPrice.classList.add('price')
 
     // Quantity
@@ -94,16 +93,22 @@ function renderCart(name, quantity, price){
     let buttonAdd = document.createElement('div');
     buttonAdd.innerHTML = '+';
     buttonAdd.classList.add('addButton');
+    buttonAdd.addEventListener('click', function () {
+        changeQ(name, "+")
+    })
     let itemQ = document.createElement('p');
     itemQ.innerHTML = quantity;
     let buttonRemove = document.createElement('div');
     buttonRemove.innerHTML = '-';
     buttonRemove.classList.add('removeButton');
+    buttonRemove.addEventListener('click', function () {
+        changeQ(name, "-")
+    })
     itemQuantity.append(buttonRemove);
     itemQuantity.append(itemQ);
     itemQuantity.append(buttonAdd);
     quant.append(itemQuantity)
-    
+
     item.append(itemName);
     item.append(quant);
     item.append(itemPrice);
@@ -111,16 +116,53 @@ function renderCart(name, quantity, price){
     sum()
 }
 
-function sum(){
-    let sum = document.querySelector('.sum');
+function changeQ(name, change) {
+    let cart = JSON.parse(localStorage.getItem('cart'));
+    let price = Number(localStorage.getItem('sum'));
+    for (i = 0; i < cart.length; i++) {
+        if (cart[i].includes(name)) {
+            if (change == "+") {
+                cart[i][1] = Number(cart[i][1]) + 1
+                price += Number(cart[i][2])
+            } else {
+                cart[i][1] -= 1
+                price -= Number(cart[i][2])
+                if (cart[i][1] == 0) {
+                    cart.splice(i, 1)
+                }
+            }
+        }
+    }
+    localStorage.setItem('cart', JSON.stringify(cart));
+    localStorage.setItem('sum', price);
+    let rootList = document.querySelector(".cart_content");
+    while (rootList.firstChild) {
+        rootList.removeChild(rootList.firstChild);
+    }
+    if (cart.length > 0) {
+
+        for (i = 0; i < cart.length; i++) {
+            renderCart(cart[i][0], cart[i][1], cart[i][2])
+        }
+    } else {
+        let rootList = document.querySelector('.cart_content');
+        let nothing = document.createElement('h2');
+        nothing.classList.add('nothing')
+        nothing.innerHTML = "You have not added any products to the cart yet.";
+        rootList.append(nothing)
+    }
+}
+
+function sum() {
+    let sum = document.querySelector('.sum > p');
     sum.innerHTML = '<b>Total sum:  </b>' + localStorage.getItem('sum') + ' SEK';
 }
 
-function addItemToCart(array){
+function addItemToCart(array) {
     let cart = JSON.parse(localStorage.getItem('cart'));
     let price = Number(localStorage.getItem('sum'));
     console.log(price)
-    if (cart != null){
+    if (cart != null) {
         cart.push(array)
         price += Number(array[2])
     } else {

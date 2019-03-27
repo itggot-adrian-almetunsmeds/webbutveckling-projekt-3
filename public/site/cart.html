@@ -70,17 +70,17 @@
 
     </div>
     <div class="sum">
-
+        <p></p>
     </div>
     <div class="checkout">
-
+       <p> Checkout</p>
     </div>
 </div>
 
 <script>
     document.addEventListener('DOMContentLoaded', (e) => {
         let cart = JSON.parse(localStorage.getItem('cart'));
-        if (cart == null) {
+        if (cart == null || cart.length == 0) {
             let rootList = document.querySelector('.cart_content');
             let nothing = document.createElement('h2');
             nothing.classList.add('nothing')

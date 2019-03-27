@@ -45,6 +45,7 @@
       connections: USB-C
       wireless_connectivity: '-'
     deal: 40%
+
 - hot:
   - name: UPhone
     img: generic_phone@300x300.jpeg
@@ -65,6 +66,7 @@
     img: 'computer_mouse_blue@300x300.png'
     alt: 'The perfect gaming mouse'
     deal: 40%
+
 - new:
   - name: UPhone
     img: generic_phone@300x300.jpeg
