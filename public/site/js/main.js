@@ -116,6 +116,17 @@ function renderCart(name, quantity, price) {
     sum()
 }
 
+function alreadyInCart(name) {
+    cart = JSON.parse(localStorage.getItem("cart"));
+    for (i = 0; i < cart.length; i++) {
+        console.log("some")
+        if (cart[i].includes(name)) {
+            document.querySelector(".addcart").innerHTML = "Already in cart"
+            document.querySelector(".addcart").onclick = function() {  };
+        }
+    }
+}
+
 function changeQ(name, change) {
     let cart = JSON.parse(localStorage.getItem('cart'));
     let price = Number(localStorage.getItem('sum'));
@@ -177,4 +188,5 @@ function addItemToCart(array) {
     localStorage.setItem('cart', JSON.stringify(cart));
     localStorage.setItem('sum', price);
     console.log('Item added to cart.')
+    document.location.reload(true)
 }

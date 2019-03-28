@@ -44,7 +44,13 @@ def product()
         <td> ' + data[0]['devices'][i]['technical'][0]['wireless_connectivity'] +'</td>
         </tr>
         </table>
-        </div>'
+        </div>
+        <script>
+        document.addEventListener("DOMContentLoaded", (e) => {
+            alreadyInCart("' + data[0]['devices'][i]['name'] + '")
+        });
+        </script>
+        '
         name = data[0]['devices'][i]['name'].gsub(/\s/,'-') + '.html.erb'
         i += 1
         File.write('site/' + name, out)

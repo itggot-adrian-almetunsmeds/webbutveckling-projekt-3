@@ -10,7 +10,7 @@
     data[3]['new'].each do |variable|
     %>
 
-    <a href="<%= variable['name'].gsub(/\s/,'-')+ ".html" %>">
+    <a class="shadow" href="<%= variable['name'].gsub(/\s/,'-')+ ".html" %>">
         <img src="img/<%= variable['img'] %>" alt="">
             <div class="name">
                 <%= variable['name'] %>
