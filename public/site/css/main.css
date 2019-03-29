@@ -161,6 +161,15 @@ header {
   justify-content: flex-end;
   margin-right: 20px; }
 
+.namequantprice {
+  padding: 0 5px 0 5px;
+  display: grid;
+  grid-template-columns: 40vw 60px auto;
+  grid-gap: 3px; }
+  .namequantprice h4:last-of-type {
+    text-align: right;
+    padding-right: 5px; }
+
 footer {
   background-color: #0061ff;
   width: 100%;

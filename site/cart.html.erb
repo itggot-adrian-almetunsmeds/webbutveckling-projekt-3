@@ -2,6 +2,11 @@
     <h2>
         Your shopping cart
     </h2>
+    <div class="namequantprice">
+        <h4>Name</h4>
+        <h4>Quantity</h4>
+        <h4>Price</h4>
+    </div>
 
     <div class="cart_content">
 
@@ -24,6 +29,7 @@
             nothing.innerHTML = "You have not added any products to the cart yet.";
             rootList.append(nothing)
             document.querySelector(".checkout").style.display = 'none'
+            document.querySelector(".namequantprice").style.display = 'grid'
 
         } else {
             for(i = 0; i < cart.length; i++){
