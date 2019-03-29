@@ -8,7 +8,7 @@ mainad:
     desktop: 'generic_headphones@2560x854.jpeg'
     mobile: 'generic_headphones@500x167.jpeg'
     tablet: 'generic_headphones@1280x427.jpeg'
-    href: 'google.com' #This link goes to nowhere useful. FIXME:
+    href: 'new.html'
 
 popularad:
   - ad: '1'

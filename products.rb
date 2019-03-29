@@ -11,13 +11,13 @@ def product()
         if data[0]['devices'][i]['deal'] != nil
             thing = "'#{data[0]['devices'][i]['name']}', 1, '#{data[0]['devices'][i]['price'].gsub(/\s.+/, '')}'"
     
-            price = '<p> ' + data[0]['devices'][i]['price'] + '</p> <p> Save ' + data[0]['devices'][i]['deal'] + ' </p>
-            <div class="addcart" onclick="addItemToCart([' + thing + '])"> Add to cart </div>'
+            price = '<p> ' + data[0]['devices'][i]['price'] + '</p> <p class="shadow dealcontent"> Save ' + data[0]['devices'][i]['deal'] + ' </p>
+            <div class="addcart shadow" onclick="addItemToCart([' + thing + '])"> Add to cart </div>'
         else
             thing = "'#{data[0]['devices'][i]['name']}', 1, '#{data[0]['devices'][i]['price'].gsub(/\s.+/, '')}'"
             
             price = '<p> ' + data[0]['devices'][i]['price'] + '</p>
-            <div class="addcart" onclick="addItemToCart([' + thing + '])"> Add to cart </div>'
+            <div class="addcart shadow" onclick="addItemToCart([' + thing + '])"> Add to cart </div>'
         end
         out='<div class="product_page"> <div class="ad">' + ad + '</div><h2>' + data[0]['devices'][i]['name'] + '</h2>
         <img src=" img/' + data[0]['devices'][i]['img'] + '" alt="' + data[0]['devices'][i]['alt'] +'">

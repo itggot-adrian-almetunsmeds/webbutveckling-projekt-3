@@ -36,6 +36,8 @@ header {
   height: 44px;
   z-index: 100000;
   grid-column: span 2; }
+  header i {
+    cursor: pointer; }
   @media only screen and (min-width: 850px) {
     header .material-icons {
       display: none; } }
@@ -364,7 +366,7 @@ footer {
   .price p {
     margin: 4px;
     font-size: 1.45rem; }
-  .price p:last-of-type {
+  .price .dealcontent {
     padding: 0 3px 0 3px;
     font-size: 1.75rem;
     background: #0061ff;
